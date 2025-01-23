@@ -35,19 +35,19 @@
             </div>
         </div>
     </div>
+    <script>
+        var name =document.getElementsByClassName("name");
+        var courseContents =document.getElementsByClassName("course-content");
+        function opentab(openname){
+            for (name of name){
+                name.classList.remove("active-tab")
+            }
+            for (courseContents of courseContent){
+                courseContents.classList.remove("active-course")
+            }
+            event.currentTarget.classList.add("active-tab")
+            document.getElementById(openname).classList.add("active-course")
+        }
+    </script>
 </body>
-<script>
-    var name =document.getElementsByClassName("name");
-    var courseContents =document.getElementsByClassName("course-content");
-    function opentab(openname){
-        for (name of name){
-            name.classList.remove("active-tab")
-        }
-        for (courseContents of courseContent){
-            courseContents.classList.remove("active-course")
-        }
-        // event.currentTarget.classList.add("active-tab")
-        // document.getElementById(openname).classList.add("active-course")
-    }
-</script>
 </html>
