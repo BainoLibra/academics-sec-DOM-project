@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="course-name">
+        <div class="semester">
+            <p class="name active-tab" onclick="opentab('semesterone')"><b>Semester 1</b></p>
+            <p class="name" onclick="opentab('semestertwo')"><b>Semester 2</b></p>
+            <p class="name" onclick="opentab('semesterthree')"><b>Semester 3</b></p>
+        </div>
+        <div>
+            <div class="course-content active-course" id="semesterone">
+                <p><span>BA 100</span> <br>Organizational theory and management</p>
+                <p><span>LW 103</span> <br>Oil and Gas Laws & institutions</p>
+                <p><span>OG 100</span> <br>Oil and Gas Supply chain management</p>
+                <p><span>OG 101</span> <br>Oil and Gas Economics</p>
+                <p><span>PA 100</span> <br>Introduction to Public Administration</p>
+                <p><span>PA 101</span> <br>Politics and Government in Africa</p>
+            </div>
+            <div class="course-content" id="semestertwo">
+                <p><span>BA 111</span> <br>Business Policy and Strategic Management</p>
+                <p><span>BA 204</span> <br>Public Financial Management</p>
+                <p><span>OG 102</span> <br>Comparative Management of Oil and Gas</p>
+                <p><span>OG 103</span> <br>Oil and Gas Public Policy Management</p>
+                <p><span>PA 200</span> <br>Public Infrastructure Planning & Management</p>
+                <p><span>PA 305</span> <br>Health Policy Planning & Management</p>
+            </div>
+            <div class="course-content" id="semesterthree">
+                <p><span>TM 100</span> <br>Communityt Engagement 1</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var name =document.getElementsByClassName("name");
+    var courseContents =document.getElementsByClassName("course-content");
+    function opentab(openname){
+        for (name of name){
+            name.classList.remove("active-tab")
+        }
+        for (courseContents of courseContent){
+            courseContents.classList.remove("active-course")
+        }
+        // event.currentTarget.classList.add("active-tab")
+        // document.getElementById(openname).classList.add("active-course")
+    }
+</script>
+</html>
