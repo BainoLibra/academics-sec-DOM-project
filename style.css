@@ -20,3 +20,12 @@
 span{
     color: red;
 }
+.active-name{
+    color: red;
+}
+.course-content{
+    display: none;
+}
+.active-course{
+    display: block;
+}
