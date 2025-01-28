@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="course-name">
+        <div>
+            <p id="welcome">welcome Libra</p>
+        </div>
         <div class="semester">
             <p class="name active-name" onclick="openname('semesterone', event)"><b>Semester 1</b></p>
             <p class="name" onclick="openname('semestertwo', event)"><b>Semester 2</b></p>
@@ -36,9 +39,16 @@
         </div>
     </div>
     <script>
+        var welcome = document.getElementById("welcome")
+        welcome.append('\n computer wizard, aspiring developer')
+        // const welcome = document.getElementById("welcome")
+        // console.log(welcome.innerText)
+        // console.log(welcome.textContent)
+        
         document.body.style.backgroundColor="grey"
+
         function openname(opentab, event){
-            var nameElements = document.getElementsByClassName("name");
+            var nameElements = document.getElementsByClassName("name"); //array-like object
             for (let element of nameElements){
                 element.classList.remove("active-name");
             }
@@ -49,6 +59,7 @@
             event.currentTarget.classList.add("active-name");
             document.getElementById(opentab).classList.add("active-course")
         }
+
 
         // var name =document.getElementsByClassName("name");
         // var courseContent =document.getElementsByClassName("course-content");
